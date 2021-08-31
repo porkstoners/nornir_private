@@ -1,0 +1,69 @@
+[1m[36mpull_show_run*******************************************************************[0m
+[0m[1m[34m* switch1 ** changed : False ***************************************************[0m
+[0m[1m[32mvvvv pull_show_run ** changed : False vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv INFO[0m
+[0m[1m[32m---- send_command ** changed : False ------------------------------------------- INFO[0m
+[0m! Command: show running-config
+! device: alpcoresw01 (vEOS, EOS-4.25.4M)
+!
+! boot system flash:/vEOS-lab.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname alpcoresw01
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username david privilege 15 role network-admin secret sha512 $6$8bk9GCt6m/59NpAt$6is5sypBRDJ7Rp.TSBwGzNAi7y97zhfmzSpyUP/u7x4PnAdJ22xsPyj4HM2km5RV.dmpWtY7HUxiEuoR6hLpo0
+username doug privilege 15 secret sha512 $6$MTGxrEkVpolo0YAS$Z5XK83QNLi6jc615G0E5F2Hxc2W0h4iS06PvEXw7QgA2a2k6IeROXVHbZEtpH2icgHbkLDfrSuI9erkYM2LKD1
+!
+interface Ethernet1
+!
+interface Ethernet2
+   shutdown
+!
+interface Ethernet3
+   shutdown
+!
+interface Ethernet4
+   shutdown
+!
+interface Ethernet5
+   shutdown
+!
+interface Ethernet6
+   shutdown
+!
+interface Ethernet7
+   shutdown
+!
+interface Ethernet8
+   shutdown
+!
+interface Ethernet9
+   shutdown
+!
+interface Ethernet10
+   shutdown
+!
+interface Ethernet11
+   shutdown
+!
+interface Ethernet12
+   shutdown
+!
+interface Management1
+   ip address dhcp
+!
+ip routing
+!
+management api http-commands
+   protocol http
+   no shutdown
+!
+end[0m
+[0m[1m[32m^^^^ END pull_show_run ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[0m
